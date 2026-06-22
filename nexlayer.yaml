@@ -1,0 +1,17 @@
+application:
+  name: shlink
+  pods:
+  - name: app
+    image: shlinkio/shlink:stable
+    path: /
+    servicePorts:
+    - 8080
+    vars:
+      DEFAULT_DOMAIN: "relaxed-weasel-shlink.cloud.nexlayer.ai"
+      USE_HTTPS: "true"
+      DB_DRIVER: sqlite
+      INITIAL_API_KEY: "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4"
+    volumes:
+    - name: shlink-data
+      mountPath: /etc/shlink/data
+      size: 5Gi
