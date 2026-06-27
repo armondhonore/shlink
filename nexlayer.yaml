@@ -8,9 +8,13 @@ application:
     - 8080
     vars:
       DEFAULT_DOMAIN: "relaxed-weasel-shlink.cloud.nexlayer.ai"
-      USE_HTTPS: "true"
+      IS_HTTPS_ENABLED: "true"
       DB_DRIVER: sqlite
       INITIAL_API_KEY: "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4"
+      SKIP_INITIAL_GEOLITE_DOWNLOAD: "true"
+      DEFAULT_BASE_URL_REDIRECT: "https://shlink.io"
+      DEFAULT_INVALID_SHORT_URL_REDIRECT: "https://shlink.io"
+      DEFAULT_REGULAR_404_REDIRECT: "https://shlink.io"
     volumes:
     - name: shlink-data
       mountPath: /etc/shlink/data
