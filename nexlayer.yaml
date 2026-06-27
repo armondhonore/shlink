@@ -15,7 +15,3 @@ application:
       DEFAULT_BASE_URL_REDIRECT: "https://shlink.io"
       DEFAULT_INVALID_SHORT_URL_REDIRECT: "https://shlink.io"
       DEFAULT_REGULAR_404_REDIRECT: "https://shlink.io"
-    volumes:
-    - name: shlink-data
-      mountPath: /etc/shlink/data
-      size: 5Gi
